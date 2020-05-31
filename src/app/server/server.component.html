@@ -2,7 +2,7 @@
 <!-- <input type="text" (input)="onUpdateServerName($event)"/> -->
 <input type="text" class="form-control" [(ngModel)]="serverName"/>
 <!-- <h6>The Server Name is : {{serverName}}</h6> -->
-<p [ngStyle]="{backgroundColor:getColor()}">{{'Server'}} with ID {{ serverId }} is {{getServerStatus()}} </p>
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{'online':serverStatus==='online'}">{{'Server'}} with ID {{ serverId }} is {{getServerStatus()}} </p>
 <!--<span>GetServerStatus Method: {{getServerStatus()}} </span>-->
 <button class="btn btn-danger" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 <!--<p [innerText]="allowNewServer"></p> -->
