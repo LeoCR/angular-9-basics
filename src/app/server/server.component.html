@@ -1,5 +1,6 @@
 <label for="serverName">Server Name:</label>
-<input type="text" (input)="onUpdateServerName($event)"/>
+<!-- <input type="text" (input)="onUpdateServerName($event)"/> -->
+<input type="text" class="form-control" [(ngModel)]="serverName"/>
 <h6>The Server Name is : {{serverName}}</h6>
 <p>Server with ID {{ serverId }}.The server Status is {{serverStatus}} </p>
 <span>GetServerStatus Method: {{getServerStatus()}} </span>
