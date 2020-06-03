@@ -1,7 +1,10 @@
 <div class="container">
-  <div class="row col-lg-12">
-    <h1>{{ title }} app is running!</h1>
-    <hr>
-    <app-server></app-server>
+  <app-cockpit></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+        <app-server-element *ngFor="let serverElement of serverElements"
+        [element]="serverElement"></app-server-element>
+    </div>
   </div>
 </div>
